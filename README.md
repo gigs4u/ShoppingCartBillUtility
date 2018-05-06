@@ -1,4 +1,4 @@
-# My Shopping Cart Bill Generation Utility
+# My Shopping Cart Bill Generation Utility (Spring Boot Rest API)
 
 # ========== Problem Statement ========== 
 Build a RESTful service that implments a check out counter for an online retail store that scans products and generates an itemized bill.
@@ -11,15 +11,17 @@ Sales tax varies based on the type of products
 
 # ========== Solution ========== 
 
-# Step-1: Run My Shopping Cart Billing Utility
+**Note for testing purpose I have made all the GET Rest API.
 
-Clone GIT Repository locally using this URL : https://github.com/gigs4u/ShoppingCartBillUtility
-Option 1: Import Maven Project in eclipse. Right click on project and Run as Java Application.
-Option 2: Open command Prompt and run "mvn package" command in the folder where you have cloned the GIT repository.
- Once mvn package is completed open the folder ..\ShoppingCartCheckOut\target\
- and run java -jar shoppingCartCheckOut-0.0.1-SNAPSHOT.jar
+# Step-1: Deploy & Run My Shopping Cart Billing Utility (Spring Boot Rest API)
 
-Open browser and type this URL to see Greetings REST services exposed : http://localhost:8080/?name=Paresh
+- Clone GIT Repository locally using this URL : https://github.com/gigs4u/ShoppingCartBillUtility
+- Option 1: Import Maven Project in eclipse. Right click on project and Run as Java Application.
+- Option 2: Open command Prompt and run "mvn package" command in the folder where you have cloned the GIT repository.
+	Once mvn package is completed open the folder ..\ShoppingCartCheckOut\target\ and run 
+	java -jar shoppingCartCheckOut-0.0.1-SNAPSHOT.jar
+
+- Open browser and type this URL to see Greetings REST services exposed : http://localhost:8080/?name=Paresh
 
 # Step-2: Create New Bill Id
 
