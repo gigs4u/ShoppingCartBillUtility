@@ -3,6 +3,8 @@
  */
 package com.checkoutcounter.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,11 +41,16 @@ public class ProductMasterController {
 	@RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_JSON_VALUE)	
 	public String addProductInInventory(@RequestBody ProductMaster prodMaster) {
 		LOGGER.info("Add New Product in Inventory");
-		
 		Integer prodId =productMasterServiceImpl.createProductInInventory(prodMaster.getProductName(), prodMaster.getTaxCategory(), prodMaster.getProdPrice());
 		String returnString = String.format(template, prodId);
 		return prodId.toString();
 		//return String.format(template, prodId);
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<ProductMaster> getAllProductMaster(){
+		LOGGER.info("Get All Product in Inventory");
+		return productMasterServiceImpl.getAllProductMaster();
 	}
 
 }

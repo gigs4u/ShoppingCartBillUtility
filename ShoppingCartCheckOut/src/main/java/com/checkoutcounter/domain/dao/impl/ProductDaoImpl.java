@@ -1,9 +1,10 @@
 package com.checkoutcounter.domain.dao.impl;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,6 +43,11 @@ public class ProductDaoImpl implements IProductDao {
 		productMap.put(prodId, product);
 		LOGGER.debug("Product Added-> "+product.getProdId());
 		return prodId;
+	}
+
+	@Override
+	public List<ProductMaster> getAllProductMasterInInventory() {
+		return new ArrayList<ProductMaster>(productMap.values());
 	}
 	
 }
