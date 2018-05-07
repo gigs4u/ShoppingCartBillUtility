@@ -13,6 +13,7 @@ Sales tax varies based on the type of products
 
 **Note for testing purpose I have made all the GET Rest API. Only Last one is POST for showing how to use POST.
 We have used Basic Authentication Credentials are pasted on each step
+Prerequisite - Java 1.8 and Maven/Eclipse. If you dont have 1.8 JDK then please change the Java version in pom.xl to <java.version>1.7</java.version>
 
 # Step-1: Deploy & Run My Shopping Cart Billing Utility (Spring Boot Rest API)
 

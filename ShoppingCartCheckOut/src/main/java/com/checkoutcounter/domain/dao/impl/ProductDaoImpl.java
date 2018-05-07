@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.Assert;
+//import org.springframework.util.Assert;
 
 import com.checkoutcounter.domain.ProductMaster;
 import com.checkoutcounter.domain.TaxCategory;
@@ -30,7 +30,7 @@ public class ProductDaoImpl implements IProductDao {
 	
 	@Override
 	public ProductMaster fetchProductMaster(Integer productId) {		
-		Assert.notNull(productId, "Product Id Cannot be Null-> "+productId);	
+		//Assert.notNull(productId, "Product Id Cannot be Null-> "+productId);	
 		return productMap.get(productId);
 	}
 
